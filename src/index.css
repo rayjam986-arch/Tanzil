@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'KFGQPC Uthmanic Script HAFS';
+  src: url('https://cdn.jsdelivr.net/gh/AhmedAlMadhoun/Quran-Fonts@master/KFGQPC_Uthmanic_Script_HAFS_Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 160 30% 10%;
+
+    --card: 40 25% 95%;
+    --card-foreground: 160 30% 10%;
+
+    --popover: 40 20% 97%;
+    --popover-foreground: 160 30% 10%;
+
+    --primary: 160 45% 25%;
+    --primary-foreground: 40 30% 97%;
+
+    --secondary: 40 35% 88%;
+    --secondary-foreground: 160 30% 15%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 43 80% 55%;
+    --accent-foreground: 160 30% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 160 45% 25%;
+
+    --radius: 0.75rem;
+
+    --gold: 43 80% 55%;
+    --gold-foreground: 43 90% 15%;
+    --emerald: 160 45% 25%;
+    --emerald-light: 160 40% 40%;
+
+    --sidebar-background: 40 20% 95%;
+    --sidebar-foreground: 160 30% 10%;
+    --sidebar-primary: 160 45% 25%;
+    --sidebar-primary-foreground: 40 30% 97%;
+    --sidebar-accent: 40 35% 88%;
+    --sidebar-accent-foreground: 160 30% 15%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 160 45% 25%;
+  }
+
+  .dark {
+    --background: 160 20% 6%;
+    --foreground: 40 20% 92%;
+
+    --card: 160 20% 9%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 160 20% 9%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 43 80% 55%;
+    --primary-foreground: 160 30% 6%;
+
+    --secondary: 160 20% 14%;
+    --secondary-foreground: 40 20% 92%;
+
+    --muted: 160 15% 14%;
+    --muted-foreground: 40 10% 55%;
+
+    --accent: 43 80% 55%;
+    --accent-foreground: 160 30% 6%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 15% 16%;
+    --input: 160 15% 16%;
+    --ring: 43 80% 55%;
+
+    --gold: 43 80% 55%;
+    --gold-foreground: 43 90% 15%;
+    --emerald: 160 40% 40%;
+    --emerald-light: 160 35% 55%;
+
+    --sidebar-background: 160 20% 8%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 43 80% 55%;
+    --sidebar-primary-foreground: 160 30% 6%;
+    --sidebar-accent: 160 20% 14%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 160 15% 16%;
+    --sidebar-ring: 43 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+  }
+
+  [dir="rtl"] body {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+  }
+
+  [dir="ltr"] body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-quran {
+    font-family: 'KFGQPC Uthmanic Script HAFS', serif;
+  }
+}
+
+@layer utilities {
+  .islamic-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a843' fill-opacity='0.06'%3E%3Cpath d='M30 0L60 30L30 60L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(43 80% 55%), hsl(43 70% 45%));
+  }
+
+  .gradient-emerald {
+    background: linear-gradient(135deg, hsl(160 45% 25%), hsl(160 40% 35%));
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(43 80% 55%), hsl(43 70% 42%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
